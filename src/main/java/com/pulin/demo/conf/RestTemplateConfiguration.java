@@ -22,8 +22,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * RestTemplateConfiguration
  */
-@Configuration
-@ConditionalOnProperty(name = "conf.restTemplate.flag", havingValue = "true", matchIfMissing = true)
+//@Configuration
+//@ConditionalOnProperty(name = "conf.restTemplate.flag", havingValue = "true", matchIfMissing = true)
 public class RestTemplateConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(RestTemplateConfiguration.class);

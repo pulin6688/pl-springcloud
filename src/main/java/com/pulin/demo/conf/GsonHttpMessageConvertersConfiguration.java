@@ -17,8 +17,8 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collection;
 
-@Configuration
-@ConditionalOnProperty(name = "conf.json.flag",havingValue = "true",matchIfMissing = true)
+//@Configuration
+//@ConditionalOnProperty(name = "conf.json.flag",havingValue = "true",matchIfMissing = true)
 public class GsonHttpMessageConvertersConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(GsonHttpMessageConvertersConfiguration.class);
