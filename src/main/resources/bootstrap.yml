@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: pulin-springcloud-demo
+#  profiles:
+#    active: ${profile.active},config,datasource,redis,mongodb
+  http:
+    multipart:
+      max-file-size: 5MB
+
+endpoints:
+  enabled: false
+  info:
+    enabled: true
+  health:
+    enabled: true
+
+management:
+  health:
+    jms:
+      enabled: false
+
+# Hystrix 线程池队列大小和线程超时时间设置
+hystrix:
+  threadpool:
+    default:
+      coreSize: 50
+      maxQueueSize: 100
+      queueSizeRejectionThreshold: 100
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+
+
+#微ribbonH调用连接超时和读超时设置 服务间调用超时配置
+ribbon:
+  ConnectionTimeout: 5000
+  ReadTimeout: 30000
+
+
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka/
+
+
+eureka.client.fetchRegistry: true
+eureka.client.healthcheck.enabled: false
+eureka.client.lease-expiration-duration-in-seconds: 20
+eureka.client.region: ali-hz-1
+eureka.client.registerWithEureka: true
+eureka.client.registry-fetch-interval-seconds: 10
+management.security.enabled: false

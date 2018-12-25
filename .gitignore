@@ -1,0 +1,8 @@
+/pl-springcloud.iml
+/logs/
+.iml
+*.iml
+*/*.iml
+*/*.log
+/bin/
+.idea/
